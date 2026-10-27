@@ -1,0 +1,20 @@
+# Personal overrides / credentials
+config.local.php
+
+# Installer lock (created on the server after installation)
+install.lock
+
+# Local SQLite test database
+storage/*.sqlite
+storage/*.sqlite-journal
+storage/*.sqlite-wal
+storage/*.sqlite-shm
+
+# Logs and OS noise
+*.log
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.idea/
+.vscode/
