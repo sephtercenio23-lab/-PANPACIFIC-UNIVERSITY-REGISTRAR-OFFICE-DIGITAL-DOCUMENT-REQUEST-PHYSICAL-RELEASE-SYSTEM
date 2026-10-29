@@ -5,7 +5,7 @@ $p=$_GET['p']??'dash';
 $docs=q('SELECT * FROM document_types WHERE active=1 ORDER BY name')->fetchAll();
 $docs=array_values(array_filter($docs,fn($d)=>true));
 // order docs like original list
-$order=['TOR','COE','COG','COGRA','GM','DIP','HD','CTC','COC','COA','OTH'];
+$order=['TOR','COE','COG','COGRA','GM','DIP','HD','CTC','COC','COA','COU','GWA','CCG','CMI','CORANK','CNR','DUPDIP','AUTH','COURSE','COE','COG','STUDSTATUS','OTHERS'];
 usort($docs,fn($a,$b)=>(array_search($a['code'],$order)===false?99:array_search($a['code'],$order))<=>(array_search($b['code'],$order)===false?99:array_search($b['code'],$order)));
 
 if($_SERVER['REQUEST_METHOD']==='POST' && $p==='req'){
